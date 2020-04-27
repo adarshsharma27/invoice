@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <title>Invoice</title>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Karla',sans-serif;
+  }
+  body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:#DDDCFD;
+   
+  }
+ .container{
+     width:470px;
+     height:400px;
+     background-color: #ffffff;
+     border:1px solid #f9f9f9;
+     border-radius:5px;
+     display: flex;
+     padding: 3rem;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-content: center;
+     text-align: center;
+     box-shadow:  10px 10px 25px 5px rgba(0,0,0,0.1);
+     z-index:10;
+ }
+ .table{
+    width: 100%;
+    padding-top: 2rem;
+ }
+ thead{
+    color:#999;
+    font-weight: 500;
+    font-size:1rem;
+    text-transform: uppercase;
+ }
+  tbody td{
+    border-bottom: 1px dashed darkblue;
+    padding: 20px 0px;
+    font-size: 1.2rem;
+ }
+ .left{
+     text-align: left;
+ }
+ .center{
+     text-align: center;
+ }
+ .right{
+     text-align: right;
+ }
+ .bottom-table{
+         display: flex;
+    justify-content: space-between;
+    
+ }
+ .bottom-table main{
+    padding: 1rem 0px;
+    font-size: 1.3rem;
+ }
+ button{
+    width:150px;
+    height:95px;
+     border-radius: 5px;
+     font-size: 20px;
+     font-weight: 500;   
+    background-color: hsl(171, 66%, 44%);
+     color:#ffffff;
+     border:1px solid #dedede;
+     cursor: pointer;
+     outline: none;
+     animation: slide 1s forwards  ease;
+     z-index: 5;
+     box-shadow:  10px 10px 25px 5px rgba(0,0,0,0.1);
+ }
+ 
+ button:hover{
+    background-color:hsl(154, 59%, 51%);
+    border:1px solid hsl(154, 59%, 51%);
+    color:white;
+    transition: all 0.5s ease-in-out;
+    box-shadow:0px 10px 20px -5px rgba(84,110,112,0.35);
+   }
+   @keyframes slide{
+    0%{
+        transform: translateX(-150px);
+       
+        }
+    50%{
+        transform: translateX(-75px);
+      
+        }
+    100%{
+        transform:  translateX(0px);
+        z-index: 10;
+        }
+}
+
+
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+      <h2>Invoice</h2>
+     <table class="table">
+         <thead>
+        <tr>
+            <td class="left">Product</td>
+            <td class="center">Unit</td>
+            <td class="right">Price</td>
+            </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td  class="left">Computers</td>
+                <td class="center">1</td>
+                <td  class="right">Rs25K</td>
+            </tr>
+            <tr>
+                    <td  class="left">Hard disk</td>
+                    <td class="center">2</td>
+                    <td  class="right">Rs45k</td>
+                </tr>
+                <tr>
+                        <td  class="left">Mouse/Keyboard</td>
+                        <td class="center">15</td>
+                        <td  class="right">Rs22k</td>
+                    </tr>
+                   </tbody>
+         
+     </table>
+    <div class="bottom-table">
+           
+               <main>Total</main>
+               <main>Rs92k</main>
+    </div>
+  
+    </div>
+    <button>Pay Now</button>
+  
+</body>
+</html>
